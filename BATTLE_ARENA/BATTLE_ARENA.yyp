@@ -34,6 +34,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oSwordSlash","path":"objects/oSwordSlash/oSwordSlash.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"collision_real_id","path":"scripts/collision_real_id/collision_real_id.yy",},},
     {"id":{"name":"sEnemy","path":"sprites/sEnemy/sEnemy.yy",},},
     {"id":{"name":"sFacing","path":"sprites/sFacing/sFacing.yy",},},
     {"id":{"name":"sGround","path":"sprites/sGround/sGround.yy",},},

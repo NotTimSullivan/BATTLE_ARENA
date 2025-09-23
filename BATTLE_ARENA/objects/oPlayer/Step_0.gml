@@ -25,10 +25,50 @@
 	hspd = lengthdir_x(len, dir);
 	vspd = lengthdir_y(len, dir);
 	
+	//sprite bbox variables
+	var sprite_bbox_top = sprite_get_bbox_top(sprite_index) - sprite_get_yoffset(sprite_index);
+	var sprite_bbox_bottom = sprite_get_bbox_bottom(sprite_index) - sprite_get_yoffset(sprite_index) + 1;
+	var sprite_bbox_left = sprite_get_bbox_left(sprite_index) - sprite_get_xoffset(sprite_index);
+	var sprite_bbox_right = sprite_get_bbox_right(sprite_index) - sprite_get_xoffset(sprite_index) + 1;
+	
+	//Collision
+	//Horizontal
+	for(var h=0; h<=ceil(abs(hspd));h++){
+		var wall_x = collision_real_id(h*sign(hspd), y_offset, oObstacle);
+		if wall_x != noone {
+			var wall_left = wall_x.bbox_left;
+			var wall_right = wall_x.bbox_right;
+			if x < wall_left {
+				snap_x = wall_left-sprite_bbox_right;
+			} else if x > wall_right {
+				snap_x = wall_right-sprite_bbox_left;
+			}
+			hspd = 0;
+		}
+	}
+	
+	//Verical
+	for(var v=0; h<=ceil(abs(vspd));v++){
+		var wall_y = collision_real_id(x_offset, v*sign(vspd), oObstacle);
+		if wall_y != noone {
+			var wall_top = wall_y.bbox_top;
+			var wall_bottom = wall_y.bbox_bottom;
+			if y < wall_top {
+				snap_y = wall_top-sprite_bbox_bottom;
+			} else if y > wall_bottom {
+				snap_y = wall_bottom-sprite_bbox_top;
+			}
+			vspd = 0;
+		}
+	}	
+	
+	
+	
 	//Apply movement
 	x += hspd
 	y += vspd
-
+	if snap_x != 0 x = snap_x;
+	if snap_y != 0 y = snap_y;
 
 #endregion
 
@@ -53,3 +93,5 @@
 	}
 
 #endregion
+
+

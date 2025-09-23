@@ -12,3 +12,11 @@ m_angle = 0;
 //Define X and X Scale
 x_scale = 1;
 y_scale = 1;
+
+//collision variables
+snap_x = 0;
+snap_y = 0;
+x_offset = 0;
+y_offset = 0;
+
+
