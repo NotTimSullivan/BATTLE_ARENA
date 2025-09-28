@@ -1,0 +1,2 @@
+depth = -y;
+arrowPassable = true;
