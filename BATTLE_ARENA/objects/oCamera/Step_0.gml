@@ -12,7 +12,7 @@
 
 	//	Get Movement Length
 	if( xaxis != 0  || yaxis != 0 ){
-		len = point_distance( 0, 0, xaxis, yaxis );
+		len = point_distance( 0, 0, xaxis, yaxis ) * .1;
 	} else len = 0;
 
 	//	Set Movement

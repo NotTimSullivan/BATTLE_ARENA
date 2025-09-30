@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oCamera",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oActor",
+  "eventList":[],
   "managed":true,
-  "name":"oCamera",
+  "name":"oActor",
   "overriddenProperties":[],
   "parent":{
-    "name":"System",
-    "path":"folders/Objects/System.yy",
+    "name":"Actors",
+    "path":"folders/Objects/Actors.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oCollision",
+    "path":"objects/oCollision/oCollision.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

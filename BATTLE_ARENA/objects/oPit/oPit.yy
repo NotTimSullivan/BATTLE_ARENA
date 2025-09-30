@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"oCamera",
+  "%Name":"oPit",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oCamera",
+  "name":"oPit",
   "overriddenProperties":[],
   "parent":{
-    "name":"System",
-    "path":"folders/Objects/System.yy",
+    "name":"Objects",
+    "path":"folders/Objects/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oCollision",
+    "path":"objects/oCollision/oCollision.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sPit",
+    "path":"sprites/sPit/sPit.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
